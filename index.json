@@ -120,5 +120,11 @@
     "path": "skills/frontend-design",
     "type": "skill",
     "upstream": "https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design/skills/frontend-design"
+  },
+  "shadcn": {
+    "description": "",
+    "path": "skills/shadcn",
+    "type": "skill",
+    "upstream": "https://github.com/shadcn-ui/ui/tree/main/skills/shadcn"
   }
 }
