@@ -126,5 +126,11 @@
     "path": "skills/shadcn",
     "type": "skill",
     "upstream": "https://github.com/shadcn-ui/ui/tree/main/skills/shadcn"
+  },
+  "grill-me": {
+    "description": "",
+    "path": "skills/grill-me",
+    "type": "skill",
+    "upstream": "https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me"
   }
 }
