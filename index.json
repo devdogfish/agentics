@@ -1,0 +1,22 @@
+{
+  "dev-server": {
+    "description": "",
+    "path": "skills/dev-server",
+    "type": "skill"
+  },
+  "jd-organizer": {
+    "description": "",
+    "path": "skills/jd-organizer",
+    "type": "skill"
+  },
+  "find-skills": {
+    "description": "",
+    "path": "skills/find-skills",
+    "type": "skill"
+  },
+  "caveman": {
+    "description": "",
+    "path": "skills/caveman",
+    "type": "skill"
+  }
+}

@@ -1,0 +1,10 @@
+---
+manager: library
+catalog_name: caveman
+catalog_type: skill
+audience: codex
+level: global
+source: https://github.com/mattpocock/skills/blob/main/skills/productivity/caveman/SKILL.md
+installed_at: '2026-06-14T22:48:02Z'
+content_fingerprint: 7e2fa5f052ed8572bbe892d4c1baeea80ba8659d0b72e6432bfd7e8fb98abc0c
+installed_from: f8225bb5f49e146f2fced69bee5da604edac120d
