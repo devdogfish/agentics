@@ -114,5 +114,11 @@
     "path": "skills/writing-great-skills",
     "type": "skill",
     "upstream": "https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-great-skills"
+  },
+  "frontend-design": {
+    "description": "",
+    "path": "skills/frontend-design",
+    "type": "skill",
+    "upstream": "https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design/skills/frontend-design"
   }
 }
