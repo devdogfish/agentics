@@ -18,5 +18,59 @@
     "description": "",
     "path": "skills/caveman",
     "type": "skill"
+  },
+  "domain-modeling": {
+    "description": "",
+    "path": "skills/domain-modeling",
+    "type": "skill",
+    "upstream": "https://github.com/mattpocock/skills/tree/main/skills/engineering/domain-modeling"
+  },
+  "grill-with-docs": {
+    "description": "",
+    "path": "skills/grill-with-docs",
+    "type": "skill",
+    "upstream": "https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs"
+  },
+  "grilling": {
+    "description": "",
+    "path": "skills/grilling",
+    "type": "skill",
+    "upstream": "https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling"
+  },
+  "handoff": {
+    "description": "",
+    "path": "skills/handoff",
+    "type": "skill",
+    "upstream": "https://github.com/mattpocock/skills/tree/main/skills/productivity/handoff"
+  },
+  "implement": {
+    "description": "",
+    "path": "skills/implement",
+    "type": "skill",
+    "upstream": "https://github.com/mattpocock/skills/tree/main/skills/engineering/implement"
+  },
+  "tdd": {
+    "description": "",
+    "path": "skills/tdd",
+    "type": "skill",
+    "upstream": "https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd"
+  },
+  "teach": {
+    "description": "",
+    "path": "skills/teach",
+    "type": "skill",
+    "upstream": "https://github.com/mattpocock/skills/tree/main/skills/productivity/teach"
+  },
+  "to-issues": {
+    "description": "",
+    "path": "skills/to-issues",
+    "type": "skill",
+    "upstream": "https://github.com/mattpocock/skills/tree/main/skills/engineering/to-issues"
+  },
+  "to-prd": {
+    "description": "",
+    "path": "skills/to-prd",
+    "type": "skill",
+    "upstream": "https://github.com/mattpocock/skills/tree/main/skills/engineering/to-prd"
   }
 }
