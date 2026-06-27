@@ -132,5 +132,11 @@
     "path": "skills/grill-me",
     "type": "skill",
     "upstream": "https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me"
+  },
+  "sandcastle-codex-auth": {
+    "description": "",
+    "path": "skills/sandcastle-codex-auth",
+    "type": "skill",
+    "upstream": "/Users/devdogfish/.codex/skills/sandcastle-codex-auth"
   }
 }

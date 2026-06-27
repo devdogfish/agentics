@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sandcastle Codex Auth"
+  short_description: "Configure Codex auth for Sandcastle Docker"
+  default_prompt: "Use $sandcastle-codex-auth to configure Sandcastle Docker to use my ChatGPT Codex login."
