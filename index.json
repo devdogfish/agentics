@@ -144,5 +144,47 @@
     "path": "skills/local-llm-recommender",
     "type": "skill",
     "upstream": "/Users/devdogfish/Downloads/local-llm-recommender/SKILL.md"
+  },
+  "article-extractor": {
+    "description": "",
+    "path": "skills/article-extractor",
+    "type": "skill",
+    "upstream": "https://github.com/michalparkola/tapestry-skills/tree/main/article-extractor"
+  },
+  "learn-this": {
+    "description": "",
+    "path": "skills/learn-this",
+    "type": "skill",
+    "upstream": "https://github.com/michalparkola/tapestry-skills/tree/main/learn-this"
+  },
+  "scrum-sage": {
+    "description": "",
+    "path": "skills/scrum-sage",
+    "type": "skill",
+    "upstream": "https://github.com/michalparkola/tapestry-skills/tree/main/scrum-sage"
+  },
+  "session-log": {
+    "description": "",
+    "path": "skills/session-log",
+    "type": "skill",
+    "upstream": "https://github.com/michalparkola/tapestry-skills/tree/main/session-log"
+  },
+  "ship-learn-next": {
+    "description": "",
+    "path": "skills/ship-learn-next",
+    "type": "skill",
+    "upstream": "https://github.com/michalparkola/tapestry-skills/tree/main/ship-learn-next"
+  },
+  "unblock-action": {
+    "description": "",
+    "path": "skills/unblock-action",
+    "type": "skill",
+    "upstream": "https://github.com/michalparkola/tapestry-skills/tree/main/unblock-action"
+  },
+  "youtube-transcript": {
+    "description": "",
+    "path": "skills/youtube-transcript",
+    "type": "skill",
+    "upstream": "https://github.com/michalparkola/tapestry-skills/tree/main/youtube-transcript"
   }
 }
