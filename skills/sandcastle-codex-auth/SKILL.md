@@ -153,7 +153,7 @@ Use a fine-grained personal access token (`github_pat_...`) with access to only 
 Tell the user this token name and create a new token in the GitHub UI:
 
 ```md
-!`open https://github.com/settings/personal-access-tokens >/dev/null 2>&1; u="${GH_REPO:-$(git config --get remote.origin.url)}"; u="${u%.git}"; u="${u##*:}"; u="${u#*github.com/}"; printf 'sandcastle-%s-repo-local-%s\n' "$(printf '%s' "$u" | tr '[:upper:]/_' '[:lower:]--' | sed -E 's/[^a-z0-9-]+/-/g; s/-+/-/g; s/^-|-$//g')" "$(date +%Y%m)"`
+!`open https://github.com/settings/personal-access-tokens >/dev/null 2>&1; u="${GH_REPO:-$(git config --get remote.origin.url)}"; u="${u%.git}"; u="${u##*:}"; u="${u#*github.com/}"; r="${u##*/}"; r="$(printf '%s' "$r" | tr '[:upper:]_' '[:lower:]-' | sed -E 's/[^a-z0-9-]+/-/g; s/-+/-/g; s/^-|-$//g' | cut -c1-31)"; printf 'sandcastle-%s-%s\n' "$r" "$(date +%y%m)"`
 ```
 
 Create `.sandcastle/.env` with that repo-only PAT and explicit repo:

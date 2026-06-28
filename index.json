@@ -138,5 +138,11 @@
     "path": "skills/sandcastle-codex-auth",
     "type": "skill",
     "upstream": "/Users/devdogfish/.codex/skills/sandcastle-codex-auth"
+  },
+  "local-llm-recommender": {
+    "description": "",
+    "path": "skills/local-llm-recommender",
+    "type": "skill",
+    "upstream": "/Users/devdogfish/Downloads/local-llm-recommender/SKILL.md"
   }
 }
