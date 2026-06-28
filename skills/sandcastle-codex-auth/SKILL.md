@@ -150,23 +150,35 @@ gh issue list -R OWNER/REPO --state open --limit 1 --json number,title
 
 Use a fine-grained personal access token (`github_pat_...`) with access to only this repo; this is the default, best option for Sandcastle GitHub auth. Do not use the broad GitHub CLI OAuth token (`gho_...`) unless GitHub blocks fine-grained PAT access for the repo.
 
+Tell the user to create the fine-grained token with these GitHub UI settings:
+
+- Resource owner: repo owner, e.g. `OWNER`
+- Repository access: Only select repositories -> `OWNER/REPO`
+- Repository permissions:
+  - Metadata: Read-only (required/automatic)
+  - Issues: Read and write
+  - Contents: No access, unless this same token will also be used for git push/API commits; then use Read and write
+- Leave Pull requests, Actions, Workflows, Administration, Secrets, and all other permissions as No access.
+- Expiration: set one, preferably 30-90 days.
+
 Tell the user this token name and create a new token in the GitHub UI:
 
 ```md
-!`open https://github.com/settings/personal-access-tokens >/dev/null 2>&1; u="${GH_REPO:-$(git config --get remote.origin.url)}"; u="${u%.git}"; u="${u##*:}"; u="${u#*github.com/}"; r="${u##*/}"; r="$(printf '%s' "$r" | tr '[:upper:]_' '[:lower:]-' | sed -E 's/[^a-z0-9-]+/-/g; s/-+/-/g; s/^-|-$//g' | cut -c1-31)"; printf 'sandcastle-%s-%s\n' "$r" "$(date +%y%m)"`
+!`open https://github.com/settings/personal-access-tokens >/dev/null 2>&1; u="${GH_REPO:-$(git config --get remote.origin.url 2>/dev/null || basename "$PWD")}"; u="${u%.git}"; u="${u##*:}"; u="${u#*github.com/}"; p="${u##*/}"; p="${p:-$(basename "$PWD")}"; p="$(printf '%s' "$p" | tr '[:upper:]_' '[:lower:]-' | sed -E 's/[^a-z0-9-]+/-/g; s/-+/-/g; s/^-|-$//g' | cut -c1-40)"; printf 'sandcastle-%s-%s\n' "$p" "$(date +%Y-%m)"`
 ```
 
-Create `.sandcastle/.env` with that repo-only PAT and explicit repo:
+Create `.sandcastle/.env` with an empty `GH_TOKEN=` slot and explicit repo:
 
 ```sh
-read -rsp "Paste fine-grained GitHub PAT: " token
-printf '\n'
 umask 077
 {
-  printf 'GH_TOKEN=%s\n' "$token"
+  printf 'GH_TOKEN=\n'
   printf 'GH_REPO=OWNER/REPO\n'
 } > .sandcastle/.env
+chmod 600 .sandcastle/.env
 ```
+
+Tell the user to paste the token locally in `.sandcastle/.env` after `GH_TOKEN=`. Never ask the user to paste GitHub tokens into chat.
 
 Ensure `.sandcastle/.gitignore` contains:
 

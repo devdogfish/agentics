@@ -1,7 +1,8 @@
+PUBLIC\_SKILL\_PC\_SPEC\_ANALYZE
+
 ---
-name: local-llm-recommender
-description: "Detects the host machine's OS, CPU, GPU, VRAM, system RAM, and free disk space using real shell commands, then recommends three open-weight local LLMs sized exactly to the hardware. Use when the user asks what LLM they can run locally, which AI model fits their computer, whether their GPU/Mac/PC is good enough for a model, what to install in Ollama/LM Studio/llama.cpp, how big a model they can run, or how much VRAM they need."
----
+
+## **name: local-llm-recommender description: Detects the host machine's OS, CPU, GPU, VRAM, system RAM, and free disk space using real shell commands, then recommends three open-weight local LLMs sized exactly to the hardware — one COMFORTABLE (fast, lower quant, headroom), one BALANCED (top quality that still fits cleanly), one STRETCH (next tier up; will be slow due to RAM offload). Picks come from the Artificial Analysis Intelligence Index open-source rankings (snapshot 11-05-2026: Qwen3.6, gpt-oss, Gemma 4, Mistral, Nemotron, Qwen3.5 families). Use this skill whenever the user asks any of: "what LLM can I run locally", "which AI model fits on my computer", "recommend a local model for my hardware", "is my GPU / Mac / PC good enough for \[model name\]", "what should I install in Ollama / LM Studio / llama.cpp", "how big a model can I run", "how much VRAM do I need", or any phrasing about running open-weight models like Qwen, gpt-oss, Gemma, Mistral, Nemotron, DeepSeek, or Llama locally. Also use this skill proactively whenever the user mentions downloading, installing, or trying any local AI model — even if they did not explicitly request a recommendation — because hardware-mismatched models are the \#1 cause of failed local setups. Skip only when the user explicitly wants cloud/API access or has already picked a specific model and only needs install steps.**
 
 # **Local LLM Recommender**
 
@@ -266,3 +267,4 @@ NOTES
 - For gpt-oss-120B: 128K context adds ~10 GB KV cache — fine here.
 - All picks via Unsloth Dynamic 2.0 quants (highest fidelity per bit).
 ```
+
